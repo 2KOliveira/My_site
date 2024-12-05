@@ -1,0 +1,118 @@
+/**********************************/
+/* 0. Variáveis
+/* 1. Estilos gerais
+/* 2. Navbar
+/* 3. Loading
+/* 4. Container
+/* 5. State Select
+/* 6. Status
+/* 7. Data Box
+/* 8. Footer
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+[data-theme="light"] {
+    --clr-backgraud:#b5b5b5;
+    --clr-font:#F5F5F5;
+    --clr-card: #53A7E6;
+    --clr-switch-track:#ffffff;
+    --clr-link:#3333FF;
+    --clr-icon: #ffffff;
+
+
+	--ff: "Cairo", sans-serif;
+    --ts-caption: 600 1.8rem/1 var(--ff);
+    --ts-normal-text: 400 1.6rem/1.4 var(--ff);
+    --ts-normal-semibold: 600 1.6rem/1.4 var(--ff);
+
+    --transition: all 0.2s linear;
+    --shadow-card: 5px 5px 30px 0 rgba(51, 51, 51, 20%);
+}
+
+[data-theme="dark"] {
+	--clr-background:#111111;
+	--clr-font:#F5F5F5;
+    --clr-card:#1A1A1A;
+    --clr-switch-track:#AABBCC;
+    --clr-link:#C2C2FF;
+    --clr-icon:#b5b5b5;
+
+	--ff: "Cairo", sans-serif;
+    --ts-caption: 600 1.8rem/1 var(--ff);
+    --ts-normal-text: 400 1.6rem/1.4 var(--ff);
+    --ts-normal-semibold: 600 1.6rem/1.4 var(--ff);
+
+    --transition: all 0.2s linear;
+    --shadow-card: 5px 5px 30px 0 rgba(221, 221, 221, 5%);
+}
+/**********************************/
+/* 1. Estilos gerais
+/**********************************/
+html{
+    font-size: 62.5;
+    font-family: var(--ff);
+    color: var(--clr-font);
+    transition: var(--transition);
+}
+
+body{
+    background-color: var(--clr-backgraud);
+    transition: var(--transition);
+}
+
+section{
+    background-color: var(--clr-card);
+    transition: var(--transition);
+    box-shadow: var(--shadow-card);
+
+}
+
+/**********************************/
+/* 2. Navbar
+/**********************************/
+#icon{
+    width: 75px;
+    height:75px;
+    margin: 0 auto;
+    display: flex;
+    margin-left: 2px;
+    margin-top: -24px;
+    fill: var(--clr-icon);
+    transition: var(--transition);
+}
+
+/**********************************/
+/* 3. Loading
+/**********************************/
+
+
+/**********************************/
+/* 4. Container
+/**********************************/
+
+/**********************************/
+/* 5. State Select
+/**********************************/
+
+
+/**********************************/
+/* 6. Descrição
+/**********************************/
+.subTitulo{
+    text-align: center;
+    color: var(--clr-font);
+}
+
+
+
+/**********************************/
+/* 7. Data Box
+/**********************************/
+
+
+/**********************************/
+/* 8. Footer
+/**********************************/
+
