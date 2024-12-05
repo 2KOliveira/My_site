@@ -7,6 +7,7 @@
     <title>Minha Página Web</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="png" href="icon.png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -24,13 +25,24 @@
             <path d="M3300 1083 c-53 -20 -67 -83 -27 -121 l23 -22 630 0 631 0 21 23 c27 29 28 67 3 98 l-19 24 -624 2 c-342 1 -630 -1 -638 -4z"/>
             </g>
             </svg>
+            
+            <div class="switch">
+                <i class="fas fa-sun"></i>
+                <span class="switch__track "></span>
+                <i class="fas fa-moon"></i>
+            </div>
+
+            <div class="loading loading--hiden">
+                <i class="fas fa-spinner loading__spinner" id="spin"></i>
+                <img src="./icon.png" id="spin_center">
+            </div>
 
         <h1 >Meu Portifolho</h1> 
         <nav>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="https://www.youtube.com/watch?v=Mqh0KeCGSS8">Luffy</a></li>
-                <li class="list-inline-item"><a href="https://www.youtube.com/watch?v=J2AI8yD5hs0" >Zoro</a></li>
-                <li class="list-inline-item"><a href="https://www.youtube.com/watch?v=toYtiv6YRPc">Sanji</a></li>
+                <li class="list-inline-item"><a href="./Paginas/controlefin.html">Controle financeiro</a></li>
+                <li class="list-inline-item"><a href="./Paginas/dashebord.html">/ Dashboard Financeiro /</a></li>
+                <li class="list-inline-item"><a href="./Paginas/listadetarefas.html">Lista de Tarefas</a></li>
             </ul>
         </nav>
     </header>
@@ -39,44 +51,47 @@
     <div class="container mt-4">
         <section>
             <h3 class="titulo">Sobre Mi</h3>
-           <p>Meu nome é Kauã Tenho 20 anos estudo programação desde os 16 anos, minha meta de vida é descobrir uma forma de ficar milhonario facil</p>
+           <p class="text">Meu nome é Kauã Tenho 22 anos estudo programação desde os 16 anos, minha meta de vida é descobrir uma forma de ficar milhonario facil</p>
         </section>
 
         <section>
             <h3 class="titulo">Carreira Academica</h3>
                 <h5 class="subTitulo">Curso de Fusion 360</h5>
-                    <p>Auto desk - Online
+                    <p class="text">Auto desk - Online
                         Carga horária: 100 horas
-                        Conteúdo: mano fatura adtiva, CAD e Manipulação de componentes 3D</p>
+                        <br>
+                        Conteúdo: manufatura aditiva, CAD e Manipulação de componentes 3D</p>
                 <h5 class="subTitulo">Curso de inglês avançado</h5>
-                    <p>Com professor particular - Online
+                    <p class="text">Com professor particular - Online
                         Carga horária: 150 horas
-                        Conteúdo: Comprimento em inglês e convívio basico em inglês</p>
+                        <br>
+                        Conteúdo: Comprienção em inglês e convívio basico em inglês</p>
                 <h5 class="subTitulo">Robotca</h5>
-                    <p>Senai - presencial e assíncrona
+                    <p class="text">Senai - presencial e assíncrona
                         Carga horária: 75 horas
+                        <br>
                         Conteúdo: Manofatura aditiva; Modelagem 3D; Pesquisa em documentos ofcias e regras de documentos.</p>
                 </section>
 
              <section>
             <h3 class="titulo">Carreira Proficional</h3>
-                <h5 class="subTitulo">lan house</h5>
-                    <p>Cargo: Estagiário
+                <h5 class="subTitulo">Lan house</h5>
+                    <p class="text">Cargo: Estagiário
 
                         Período 01/2018 – 12/2018
-                        
+                        <br>
                         Principal atividades: Atendimento ao cliente, gestão e controle do tempo dos clientes, operação computacional e criação de documentos com a padronização da ABNT</p>
                 <h5 class="subTitulo">Deposito de Bebidas, Bar do Chefe</h5>
-                    <p>Cargo: Repositor e Gerente
+                    <p class="text">Cargo: Repositor e Gerente
 
                         Período 09/2021 – 01/2022
-                        
+                        <br>
                         Principal atividades: Atendimento ao cliente, padronização de estoque com o Exel e gestão empresarial.</p>
                 <h5 class="subTitulo">Flash assistencia</h5>
-                    <p>Cargo: Auditor
+                    <p class="text">Cargo: Auditor
 
                         Período 02/2021 – atual momento
-                        
+                        <br>
                         Principal atividades: Verificação de serviços, Autorizações de pagamento, Gestão do setor financeiro, Gestão de dados dodos da empresa e </p>
             </section>
 

@@ -1,12 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" data-theme="light">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Financeiro</title>
-    <link rel="stylesheet" href="dashbordf.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dashbordf.css">
 </head>
 <body>
-    
+    <div class="loading loading--hiden">
+        <i class="fas fa-spinner loading__spinner"></i>
+    </div>
+	<div class="navbar">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1139" width="90" height="50">
+            <path transform="translate(1018)" d="m0 0 7 6 17 17 8 7 16 15 14 14 8 7 12 12 8 7 14 14 8 7 15 15 8 7 17 16 17 17 8 7 8 8-2 4-7 7-7 8-22 22-7 8-16 17-23 23-7 8-14 15-19 19-7 8-15 16-20 20-7 8-3 3-8-7-15-14-7-7-8-7-19-19 2-4 15-15 7-8 11-11 7-8 14-14 7-8 12-12 1-2-42 1-28 2-32 5-30 7-37 12-30 13-23 12-17 10-15 10-14 10-16 13-10 8-13 12-20 20-7 8-8 10-9 11-11 16-12 18-13 24-8 15-13 32-6 18-7 23-7 35-5 42v45l3 33 6 34 6 24 8 25 15 37 17 33 11 17 12 18 13 16 8 10 9 10 8 8 7 8 9 9 11 9 10 9 13 10 19 13 14 9 22 12 16 8 28 12 40 13 33 7 28 4 20 2h49l38-4 36-7 31-9 22-8 23-10 26-13 20-12 25-17 16-13 11-9 10-9 21-21 10-11 8-10 11-14 15-22 9-15 15-28 16-38 11-36 8-38 3-22 2-27v-35l-3-35-5-30-7-29-12-36-10-24-13-26-13-22-8-12-12-17-18-22-13-14-7-8-12-11-11-10-10-8-4-5 13-16 6-8 14-18 10-13 11-14 4 2 13 11 10 8 12 12 8 7 10 10 7 8 7 7 11 14 13 16 14 20 12 19 11 19 14 27 13 29 13 37 10 37 6 31 4 29 2 24v57l-3 32-4 28-6 29-9 33-10 29-11 26-12 25-9 17-10 17-14 21-13 18-9 11-8 10-11 12-7 8-23 23-8 7-15 13-13 10-16 12-29 19-27 15-16 8-28 13-39 14-36 10-36 7-30 4-31 2h-35l-36-3-32-4-29-6-20-5-35-11-28-11-30-14-24-13-18-11-18-12-18-13-13-11-10-8-16-15-10-9-9-9-7-8-12-13-8-10-14-18-14-20-12-19-14-25-8-16-8-17-11-27-10-30-8-30-7-36-4-33-1-13v-65l4-37 6-34 7-29 9-29 10-27 12-27 12-24 13-22 9-14 13-19 11-14 18-22 7-7 7-8 19-19 8-7 10-9 11-9 18-14 15-10 26-17 24-13 17-9 30-13 34-12 25-7 25-6 36-6 34-3 52-1-19-19-8-7-7-7-8-7-18-18-8-7-13-13 2-4 13-13 7-8 8-8 7-8z"/>
+            <path transform="translate(994,411)" d="m0 0h79v45l18 4 16 5 12 5 15 8 12 9 16 16 9 13 10 18-1 3-61 28-6 2-7-10-4-5-11-8-15-8-15-5-16-3h-34l-17 3-12 4-11 6-5 4-6 10-2 6v10l4 9 5 6 16 8 15 4 39 6 35 5 24 5 22 6 21 9 13 8 10 8 7 6 11 15 6 13 5 16 2 12v33l-4 18-7 17-7 12-8 10-12 12-16 11-19 10-24 8-22 4-1 51-61 1h-18l-1-49-9-2-20-4-21-7-18-8-16-10-16-13-7-7-8-10-9-13-11-23v-2l35-15 36-15h3l8 16 11 12 14 10 17 8 17 5 20 3h20l18-2 19-5 16-8 9-8 6-12 1-5v-12l-4-9-7-8-11-7-17-6-21-5-43-6-26-4-26-6-19-7-15-8-11-8-13-13-9-14-6-15-3-14-1-8v-22l2-15 6-18 9-16 11-13 10-9 13-9 16-8 18-7 25-6 7-2z"/>
+        </svg>
+        <div class="switch">
+            <i class="fas fa-sun"></i>
+            <span class="switch__track "></span>
+            <i class="fas fa-moon"></i>
+        </div>      
+    </div>
+
+    <div class="container">
+        <div class="invest-select">
+            <div class="invest-select-toggle">
+                <span class="invest-select-toggle__invest-selected investimento=true">Investimento</span>
+                <i class="fas fa-chevron-down invest-select-toggle__icon"></i>
+            </div>
+            <div class="invest-select-list">
+                <input type="text" placeholder="Tipo de Investimento..." class="invest-select-list__search">
+                <ul>
+                    <li class="invest-select-list__item" data-id="criptoativos">Criptoativos</li>
+                    <li class="invest-select-list__item" data-id="derivativos">Derivativos</li>
+                    <li class="invest-select-list__item" data-id="fundos-de-investimento">Fundos de Investimento</li>
+                    <li class="invest-select-list__item" data-id="investimentos-alternativos">Investimentos Alternativos</li>
+                    <li class="invest-select-list__item" data-id="investimentos-no-exterior">Investimentos no Exterior</li>
+                    <li class="invest-select-list__item" data-id="renda-fixa">Renda Fixa</li>
+                    <li class="invest-select-list__item" data-id="renda-variavel">Renda Variavel</li>
+                    <li class="invest-select-list__item" data-id="previdencia-privada">Previdencia Privada</li>
+                </ul>
+            </div>
+            <div class="invest-select-list-subclass">
+                <input type="text" placeholder="Subclass..." class="invest-select-list__search">
+                <ul>
+                    <li class="invest-select-list__item" data-tipe="criptoativos" data-id="criptomoedas">Criptomoedas</li>
+                    <li class="invest-select-list__item" data-tipe="criptoativos" data-id="tokens-de-investimento">Tokens de Investimento</li>
+                    <li class="invest-select-list__item" data-tipe="criptoativos" data-id="NFTs">Non-Fungible Tokens (NFTs)</li>
+                    
+                    <li class="invest-select-list__item" data-tipe="derivativos" data-id="opcoes">Opções</li>
+                    <li class="invest-select-list__item" data-tipe="derivativos" data-id="futuros">Futuros</li>
+                    <li class="invest-select-list__item" data-tipe="derivativos" data-id="swaps">Swaps</li>
+
+                    <li class="invest-select-list__item" data-tipe="fundos-de-investimento" data-id="fundos-de-renda-fixa">Fundos de Renda Fixa</li>
+                    <li class="invest-select-list__item" data-tipe="fundos-de-investimento" data-id="fundos-de-acoes">Fundos de Ações</li>
+                    <li class="invest-select-list__item" data-tipe="fundos-de-investimento" data-id="fundos-multimercado">Fundos Multimercado</li>
+                    <li class="invest-select-list__item" data-tipe="fundos-de-investimento" data-id="fiis">Fundos de Investimento Imobiliário (FIIs)</li>
+                    <li class="invest-select-list__item" data-tipe="fundos-de-investimento" data-id="fundos-cambiais">Fundos Cambiais</li>
+
+                    <li class="invest-select-list__item" data-tipe="investimentos-alternativos" data-id="crowdfunding">Crowdfunding</li>
+                    <li class="invest-select-list__item" data-tipe="investimentos-alternativos" data-id="venture-capital-e-private-equity">Venture Capital e Private Equity</li>
+                    <li class="invest-select-list__item" data-tipe="investimentos-alternativos" data-id="obras-de-arte-vinhos-joias">Obras de Arte, Vinhos, Joias</li>
+                    <li class="invest-select-list__item" data-tipe="investimentos-alternativos" data-id="imoveis">Imóveis</li>
+
+                    <li class="invest-select-list__item" data-tipe="investimentos-no-exterior" data-id="stocks-e-bonds">Stocks e Bonds</li>
+                    <li class="invest-select-list__item" data-tipe="investimentos-no-exterior" data-id="etfs">ETFs Internacionais</li>
+                    <li class="invest-select-list__item" data-tipe="investimentos-no-exterior" data-id="reits">Real Estate Investment Trusts (REITs)</li>
+                    <li class="invest-select-list__item" data-tipe="investimentos-no-exterior" data-id="diversificação-geográfica">Diversificação geográfica</li>
+
+                    <li class="invest-select-list__item" data-tipe="renda-fixa" data-id="titulos-publicos">Títulos Públicos</li>
+                    <li class="invest-select-list__item" data-tipe="renda-fixa" data-id="cdb">Certificado de Depósito Bancário (CDB)</li>
+                    <li class="invest-select-list__item" data-tipe="renda-fixa" data-id="lci/lca">Letras de Crédito Imobiliário/Agronegócio (LCI/LCA)</li>
+                    <li class="invest-select-list__item" data-tipe="renda-fixa" data-id="debentures">Debêntures</li>
+                    <li class="invest-select-list__item" data-tipe="renda-fixa" data-id="cri/cra">Certificados de Recebíveis Imobiliários/Agrícolas (CRI/CRA)</li>
+                    <li class="invest-select-list__item" data-tipe="renda-fixa" data-id="poupanca">Poupança</li>
+
+                    <li class="invest-select-list__item" data-tipe="renda-variavel" data-id="acoes">Ações</li>
+                    <li class="invest-select-list__item" data-tipe="renda-variavel" data-id="etfs">Exchange Traded Funds (ETFs)</li>
+                    <li class="invest-select-list__item" data-tipe="renda-variavel" data-id="fiis">Fundos Imobiliários (FIIs)</li>
+                    <li class="invest-select-list__item" data-tipe="renda-variavel" data-id="bdrs">Brazilian Depositary Receipts (BDRs)</li>
+                    <li class="invest-select-list__item" data-tipe="renda-variavel" data-id="commodities">Commodities</li>
+
+                    <li class="invest-select-list__item" data-tipe="previdencia-privada" data-id="pgbl">Plano Gerador de Benefício Livre (PGBL)</li>
+                    <li class="invest-select-list__item" data-tipe="previdencia-privada" data-id="vgbl">Vida Gerador de Benefício Livre (VGBL)</li>
+                </ul>
+            </div>
+        </div>
+        <section class="status">
+            <div class="status__icon status__icon--heritage">
+                <i class="fa fa-piggy-bank"></i>
+            </div>
+            <div class="info">
+                <span class="info__total info__total--heritage">1.000.000</span>
+                <h2 class="info__label">Patrimonio</h2>
+            </div>
+        </section>
+
+        <section class="status">
+            <div class="status__icon status__icon--Quotation">
+                <i class="fa fa-coins";"></i>
+            </div>
+            <div class="info">
+                <span class="info__total info__total--Quotation">1.000.000</span>
+                <h2 class="info__label">Cotação</h2>
+            </div>
+        </section>
+
+        <section class="status">
+            <div class="status__icon status__icon--Variation">
+                <i class="fa fa-comment-dollar"></i>
+            </div>
+            <div class="info">
+                <span class="info__total info__total--Variation">1.000.000</span>
+                <h2 class="info__label">Variação</h2>
+            </div>
+        </section>
+
+        <section class="status">
+            <div class="status__icon status__icon--P/L">
+                <i class="fa fa-chart-line"></i>
+            </div>
+            <div class="info">
+                <span class="info__total info__total--P/L">1.000.000</span>
+                <h2 class="info__label">Preço sobre o lucro</h2>
+            </div>
+        </section>
+
+        <section class="status">
+            <div class="status__icon status__icon--P/VP">
+                <i class="fa fa-chart-pie"></i>
+            </div>
+            <div class="info">
+                <span class="info__total info__total--P/VP">1.000.000</span>
+                <h2 class="info__label">Preço sobre o Valor Patrimonial</h2>
+            </div>
+        </section>
+
+        <section class="status">
+            <div class="status__icon status__icon--DY">
+                <i class="fa fa-money-bill"></i>
+            </div>
+            <div class="info">
+                <span class="info__total info__total--DY">1.000.000</span>
+                <h2 class="info__label">Dividend Yield</h2>
+            </div>
+        </section>
+    </div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.27.3/apexcharts.min.js" integrity="sha512-nKTh1Ik8Kzbrxo9A6xOBtEbzdNYcjI4Pr5XE88sNJQk87sY8mBlUfh61lYm0i710r5mGcIZ9tWSwORQbQ4plQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="js/apexcharts-pt-br.js"></script>
+	<script src="js/apiCovid.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
