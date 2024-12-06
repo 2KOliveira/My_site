@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Minha Página Web</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="png" href="icon.png" >
@@ -12,7 +11,10 @@
 <body>
 
     <!-- Cabeçalho -->
-    <header class="bg-info text-white text-center py-4">
+    <header class="bg-info text-black text-center py-4">
+        <section class="navbar">
+            <h1 class="nome">Meu Portifolho</h1>
+
         <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" id="icon">
             <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" id="icon"stroke="none">
             <path d="M2192 5019 c-26 -13 -55 -39 -70 -62 -27 -40 -27 -42 -30 -249 l-3 -208 -354 0 c-220 0 -373 -4 -405 -11 -101 -22 -159 -103 -160 -221 l0 -68 -510 0 c-482 0 -513 -1 -548 -19 -47 -24 -77 -56 -97 -103 -13 -33 -15 -245 -15 -1938 0 -1693 2 -1905 15 -1938 21 -49 52 -81 100 -103 39 -18 128 -19 2443 -19 2146 0 2407 2 2440 15 49 21 81 52 103 100 18 38 19 84 19 851 0 806 0 811 -21 838 -28 36 -80 36 -108 0 -21 -27 -21 -33 -21 -821 0 -528 -3 -801 -10 -814 -11 -19 -48 -19 -2400 -19 -2352 0 -2389 0 -2400 19 -14 27 -14 3755 0 3782 10 19 32 19 970 19 l960 0 0 -50 c0 -36 -4 -50 -14 -50 -7 0 -25 -9 -40 -21 -34 -27 -36 -77 -3 -107 23 -22 24 -22 528 -22 l506 0 21 23 c31 33 29 80 -4 106 -15 12 -33 21 -40 21 -10 0 -14 14 -14 50 l0 50 960 0 c938 0 960 0 970 -19 7 -13 10 -326 10 -943 1 -741 3 -926 14 -940 30 -39 92 -40 122 0 11 14 13 198 14 955 0 824 -2 942 -15 975 -20 47 -50 79 -97 103 -35 18 -66 19 -548 19 l-510 0 0 68 c-1 118 -59 199 -160 221 -32 7 -185 11 -405 11 l-354 0 -3 208 c-3 207 -3 209 -30 249 -41 61 -94 83 -205 83 -87 0 -93 -1 -112 -26 -54 -69 -2 -124 118 -124 31 0 62 -5 69 -12 9 -9 12 -127 12 -470 l0 -458 -320 0 -320 0 0 458 c0 343 3 461 12 470 7 7 38 12 69 12 120 0 172 55 118 124 -19 25 -25 26 -112 26 -74 0 -101 -4 -135 -21z m-102 -744 l0 -75 -385 0 -385 0 0 59 c0 95 -18 91 407 91 l363 0 0 -75z m1688 59 c19 -13 22 -24 22 -75 l0 -59 -385 0 -385 0 0 75 0 75 363 0 c312 0 366 -2 385 -16z"/>
@@ -31,20 +33,21 @@
                 <span class="switch__track "></span>
                 <i class="fas fa-moon"></i>
             </div>
+            
+            <nav>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="./Paginas/controlefin.html">Controle financeiro</a></li>
+                    <li class="list-inline-item"><a href="./Paginas/dashebord.html">/ Dashboard Financeiro /</a></li>
+                    <li class="list-inline-item"><a href="./Paginas/listadetarefas.html">Lista de Tarefas</a></li>
+                </ul>
+            </nav>
 
-            <div class="loading loading--hiden">
-                <i class="fas fa-spinner loading__spinner" id="spin"></i>
-                <img src="./icon.png" id="spin_center">
-            </div>
+        </section>   
 
-        <h1 >Meu Portifolho</h1> 
-        <nav>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="./Paginas/controlefin.html">Controle financeiro</a></li>
-                <li class="list-inline-item"><a href="./Paginas/dashebord.html">/ Dashboard Financeiro /</a></li>
-                <li class="list-inline-item"><a href="./Paginas/listadetarefas.html">Lista de Tarefas</a></li>
-            </ul>
-        </nav>
+        <div class="loading loading--hiden">
+            <i class="fas fa-spinner loading__spinner" id="spin"></i>
+            <img src="./icon.png" id="spin_center">
+        </div>
     </header>
 
     <!-- Corpo da Página -->
@@ -90,9 +93,20 @@
                 <h5 class="subTitulo">Flash assistencia</h5>
                     <p class="text">Cargo: Auditor
 
-                        Período 02/2021 – atual momento
+                        Período 02/2023 – 07/2024
                         <br>
-                        Principal atividades: Verificação de serviços, Autorizações de pagamento, Gestão do setor financeiro, Gestão de dados dodos da empresa e </p>
+                        Principal atividades: Verificação de serviços, Auxilio nos pagamentos, Auxilio na gestão do setor
+                        financeiro, Gestão de dados dodos da empresa e verificação de documentos a serem pagos 
+                    
+                    </p>
+
+                <h5 class="subTitulo">Balbino’S Delícia de Costela</h5>
+                    <p class="text">Cargo: Cumim
+
+                        Período 07/2024 – Trabalho atual
+                        <br>
+                        Principal atividades: Orientar a refeição até o cliente
+                    </p>
             </section>
 
         </section>

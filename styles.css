@@ -14,10 +14,10 @@
 /* 0. Variáveis
 /**********************************/
 [data-theme="light"] {
-    --clr-backgraud:#b5b5b5;
-    --clr-font:#233a4e;
-    --clr-text: #1a343b;
-    --clr-card: #53A7E6;
+    --clr-backgraud:#ffffff;
+    --clr-font:#A81D00;
+    --clr-text: #A81D00;
+    --clr-card: #a7a7a7;
     --clr-switch-track:#ffffff;
     --clr-link:#3333FF;
     --clr-icon: #ffffff;
@@ -69,28 +69,43 @@ section{
     transition: var(--transition);
     box-shadow: var(--shadow-card);
     border-radius: 0.5rem;
-
+    
 }
 
 /**********************************/
 /* 2. Navbar
 /**********************************/
 #icon{
-    width: 75px;
-    height:75px;
-    margin: 0 auto;
-    display: flex;
-    margin-left: 2px;
-    margin-top: -24px;
     fill: var(--clr-icon);
     transition: var(--transition);
+    display: flex;
+    height: 100px;
+    width: 100px;
+    margin-left: 1.5rem;
+    margin-top: -5.5rem;
+}
+.nome{
+    display: flex;
+    position: relative;
+    right: 35%;
+    padding: 1.5rem;
+    justify-content: center;
+    font: var(--ts-caption);
+}
+.list-inline{
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
 }
 
 .switch{
     display: flex;
     font-size: 1.8rem;
-    margin-left: 85%;
-    margin-top: -5%;
+    margin-left: 93%;
+    margin-top: -3%;
 }
 
 .switch__track{
@@ -178,20 +193,24 @@ section{
 /**********************************/
 .titulo{
     text-align: center;
+    padding: 2rem;
     color: var(--clr-font);
     transition: var(--transition);
+    font: var(--ts-caption)
 }
 
 .subTitulo{
-    padding: 0.5rem;
+    padding: 1.75rem;
     color: var(--clr-font);
     transition: var(--transition);
+    font: var(--ts-caption)
 }
 
 .text{
-    padding: 0.75rem;
+    padding: 2.75rem;
     color: var(--clr-text);
-
+    margin-top: -7rem;
+    font: var(--ts-normal-text);
 }
 
 /**********************************/
