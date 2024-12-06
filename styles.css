@@ -221,4 +221,10 @@ section{
 /**********************************/
 /* 8. Footer
 /**********************************/
-
+footer{
+    background-color: #111111;
+    color:#ffffff;
+    text-align:center;
+    font: var(--ts-caption);
+    height: 100px;
+}
