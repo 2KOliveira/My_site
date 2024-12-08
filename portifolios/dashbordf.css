@@ -1,0 +1,314 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+/**********************************/
+/* 0. Variáveis
+/* 1. Estilos gerais
+/* 2. Navbar
+/* 3. Loading
+/* 4. Container
+/* 5. invest Select
+/* 6. Status
+/* 7. Data Box
+/* 8. Footer
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+
+[data-theme="light"] {
+	--clr-background:#F5F5F5;
+	--clr-font:#111111;
+    --clr-card:#F0F3D6;
+    --clr-switch-track:#AABBCC;
+    --clr-link:#117711;
+
+    --clr-confirmed:#D21212;
+    --clr-deaths:#223344;
+    --clr-vaccinated-1:#0000C7;
+    --clr-vaccinated-2:#117711;
+
+	--ff: "Cairo", sans-serif;
+    --ts-caption: 600 1.5rem/1 var(--ff);
+    --ts-normal-text: 400 1.4rem/1.4 var(--ff);
+    --ts-normal-semibold: 600 1.4rem/1.4 var(--ff);
+
+    --transition: all 0.2s linear;
+    --shadow-card: 5px 5px 30px 0 rgba(51, 51, 51, 20%);
+}
+
+[data-theme="dark"] {
+	--clr-background:#111111;
+	--clr-font:#F5F5F5;
+    --clr-card:#1A1A1A;
+    --clr-switch-track:#AABBCC;
+    --clr-link:#C2C2FF;
+
+    --clr-confirmed:#FF3333;
+    --clr-deaths:#AABBCC;
+    --clr-vaccinated-1:#6666DD;
+    --clr-vaccinated-2:#44BB44;
+    
+	--ff: "Cairo", sans-serif;
+    --ts-caption: 600 1.2rem/1 var(--ff);
+    --ts-normal-text: 400 1.6rem/1.4 var(--ff);
+    --ts-normal-semibold: 600 1.6rem/1.4 var(--ff);
+
+    --transition: all 0.2s linear;
+    --shadow-card: 5px 5px 30px 0 rgba(221, 221, 221, 5%);
+}
+
+/**********************************/
+/* 1. Estilos gerais
+/**********************************/
+
+html{
+    font-size: 62.5;
+    font-family: var(--ff);
+    color: var(--clr-font);
+    transition: var(--transition);
+}
+
+body{
+    background-color: var(--clr-background);
+    transition: var(--transition);
+}
+
+section{
+    background-color: var(--clr-card);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-card);
+    padding: 1.5rem;
+    transition: var(--transition);
+}
+
+
+
+/**********************************/
+/* 2. Navbar
+/**********************************/
+
+.navbar{
+    background-color: var(--clr-card);
+    transition: var(--transition);
+    min-height: 4.25rem;
+    padding: 0.6rem;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    fill:var(--clr-font);
+    transition: var(--transition);
+    
+}
+
+.switch{
+    display: flex;
+    font-size: 1.8rem;
+}
+
+.switch__track{
+    background-color: var(--clr-switch-track);
+    display: block;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin: 0 .2rem;
+}
+
+.switch__track::before{
+    content: "";
+    background-color: var(--clr-font);
+    transition: var(--transition);
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    left: 0;
+}   
+
+.switch__track--darck::before{
+    left: 2rem;
+
+}
+
+/**********************************/
+/* 3. Loading
+/**********************************/
+
+.loading{
+    position: fixed;
+    background-color: var(--clr-background);
+    transition: var(--transition);
+    width: 100vw;
+    height: 100vh;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.loading__spinner{
+    animation: spin 2s infinite linear;
+}
+@keyframes spin {
+    to{
+        transform: rotate(360deg); 
+    }
+}
+
+.loading--hiden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+/**********************************/
+/* 4. Container
+/**********************************/
+
+.container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 30px;
+    margin: 3rem 1.6rem;
+}
+
+/**********************************/
+/* 5. invest Select
+/**********************************/
+
+.invest-select{
+    font: var(--ts-normal-semibold);
+    background-color: var(--clr-card);
+    transition: var(--transition);
+    box-shadow: var(--shadow-card);
+    border-radius: 1rem;
+    position: relative;
+}
+
+.invest-select-toggle{
+    padding: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.invest-select-toggle__icon{
+    transition: var(--transition);
+}
+
+.invest-select-toggle__icon--rotate{
+    transform: rotate(-180dog);
+}
+
+.invest-select-list{
+    max-height: 10rem;
+    overflow-y: scroll;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    position: absolute;
+    width: 100%;
+    background-color: var(--clr-card);
+    transition: var(--transition);
+    box-shadow: var(--shadow-card);
+    top: calc(100% + 0.5rem);
+    visibility: hidden;
+    opacity: 0; 
+}
+
+.invest-select-list-subclass{
+    max-height: 10rem;
+    overflow-y: scroll;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    position: absolute;
+    width: 100%;
+    background-color: var(--clr-card);
+    transition: var(--transition);
+    box-shadow: var(--shadow-card);
+    top: calc(100% + 11rem);
+    visibility: hidden;
+    opacity: 0; 
+}
+
+.invest-select-list--show{
+    visibility: visible;
+    opacity: 1;
+}
+
+.invest-select-list__search{
+    background-color: var(--clr-background);
+    color: var(--clr-font);
+    transition: var(--transition);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    border: none;
+    width: 100%;
+}
+
+.invest-select-list::placeholder{
+    color: var(--clr-font);
+    opacity: 1.5rem;
+    transition: var(--transition);
+}
+
+.invest-select-list__item{
+    color: var(--clr-link);
+    padding: .3rem;
+    cursor: pointer;
+}
+
+.invest-select-list__item:hover{
+    background-color: var(--clr-link);
+    color: var(--clr-font);
+    border-radius: .2rem;
+}
+
+.invest-select-list--hide{
+    display: none;
+}
+
+/**********************************/
+/* 6. Status
+/**********************************/
+
+.status{
+    min-height: 6rem;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+    margin-top: -.8rem;
+}
+
+.status__icon{
+    font-size: 2.5rem;
+    margin-right: .5rem;
+}
+
+.info{
+    font: var(--ts-caption);
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+
+/**********************************/
+/* 7. Data Box
+/**********************************/
+
+
+
+/**********************************/
+/* 8. Footer
+/**********************************/
+
