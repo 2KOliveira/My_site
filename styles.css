@@ -14,13 +14,13 @@
 /* 0. Variáveis
 /**********************************/
 [data-theme="light"] {
-    --clr-backgraud:#ffffff;
-    --clr-font:#A81D00;
-    --clr-text: #A81D00;
-    --clr-card: #a7a7a7;
-    --clr-switch-track:#ffffff;
-    --clr-link:#3333FF;
-    --clr-icon: #ffffff;
+    --clr-backgraud:;
+    --clr-font:;
+    --clr-text:;
+    --clr-card:;
+    --clr-switch-track:;
+    --clr-link:;
+    --clr-icon:;
 
 
 	--ff: "Cairo", sans-serif;
@@ -33,13 +33,13 @@
 }
 
 [data-theme="dark"] {
-	--clr-background:#111111;
-	--clr-font:#D2F6F4;
-    --clr-text: #;
-    --clr-card:#1A1A1A;
-    --clr-switch-track:#AABBCC;
-    --clr-link:#C2C2FF;
-    --clr-icon:#b5b5b5;
+	--clr-background:;
+	--clr-font:;
+    --clr-text:;
+    --clr-card:;
+    --clr-switch-track:;
+    --clr-link:;
+    --clr-icon:;
 
 	--ff: "Cairo", sans-serif;
     --ts-caption: 600 1.8rem/1 var(--ff);
@@ -52,132 +52,14 @@
 /**********************************/
 /* 1. Estilos gerais
 /**********************************/
-html{
-    font-size: 62.5;
-    font-family: var(--ff);
-    color: var(--clr-font);
-    transition: var(--transition);
-}
-
-body{
-    background-color: var(--clr-backgraud);
-    transition: var(--transition);
-}
-
-section{
-    background-color: var(--clr-card);
-    transition: var(--transition);
-    box-shadow: var(--shadow-card);
-    border-radius: 0.5rem;
-    
-}
 
 /**********************************/
 /* 2. Navbar
 /**********************************/
-#icon{
-    fill: var(--clr-icon);
-    transition: var(--transition);
-    display: flex;
-    height: 100px;
-    width: 100px;
-    margin-left: 1.5rem;
-    margin-top: -5.5rem;
-}
-.nome{
-    display: flex;
-    position: relative;
-    right: 35%;
-    padding: 1.5rem;
-    justify-content: center;
-    font: var(--ts-caption);
-}
-.list-inline{
-    list-style-type: none;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-}
-
-.switch{
-    display: flex;
-    font-size: 1.8rem;
-    margin-left: 93%;
-    margin-top: -3%;
-}
-
-.switch__track{
-    background-color: var(--clr-switch-track);
-    display: block;
-    height: 2rem;
-    width: 4rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    margin: 0 .2rem;
-}
-
-.switch__track::before{
-    content: "";
-    background-color: var(--clr-font);
-    transition: var(--transition);
-    display: block;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 1rem;
-    position: relative;
-    left: 0;
-}   
-
-.switch__track--darck::before{
-    left: 2rem;
-
-}
-
-.list-inline{
-    padding: auto;
-    font-size: 1.25rem;
-}
 
 /**********************************/
 /* 3. Loading
 /**********************************/
-.loading{
-    position: fixed;
-    background-color: var(--clr-background);
-    transition: var(--transition);
-    width: 100vw;
-    height: 100vh;
-    font-size: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-.loading__spinner{
-    animation: spin 2s infinite linear;
-}
-@keyframes spin {
-    to{
-        transform: rotate(360deg); 
-    }
-}
-
-#spin{
-    position: absolute;
-    width: 50%;
-}
-
-#spin_center{
-    position: relative;
-    width:25px;
-}
-
-.loading--hiden{
-    visibility: hidden;
-    opacity: 0;
-}
 
 /**********************************/
 /* 4. Container
@@ -187,31 +69,9 @@ section{
 /* 5. State Select
 /**********************************/
 
-
 /**********************************/
 /* 6. Descrição
 /**********************************/
-.titulo{
-    text-align: center;
-    padding: 2rem;
-    color: var(--clr-font);
-    transition: var(--transition);
-    font: var(--ts-caption)
-}
-
-.subTitulo{
-    padding: 1.75rem;
-    color: var(--clr-font);
-    transition: var(--transition);
-    font: var(--ts-caption)
-}
-
-.text{
-    padding: 2.75rem;
-    color: var(--clr-text);
-    margin-top: -7rem;
-    font: var(--ts-normal-text);
-}
 
 /**********************************/
 /* 7. Data Box
@@ -221,10 +81,3 @@ section{
 /**********************************/
 /* 8. Footer
 /**********************************/
-footer{
-    background-color: #111111;
-    color:#ffffff;
-    text-align:center;
-    font: var(--ts-caption);
-    height: 100px;
-}
