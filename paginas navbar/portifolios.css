@@ -1,0 +1,528 @@
+/**********************************/
+/* 0. Variáveis
+/* 1. Estilos gerais
+/* 2. Navbar
+/* 3. Loading
+/* 4. Container
+/* 5. State Select
+/* 6. Status
+/* 7. Data Box
+/* 8. Footer
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+[data-theme="light"] {
+    --clr-backgraud:#C5C5C5;
+    --clr-font:#333333;
+    --clr-text:#959493;
+    --clr-card:#3A802E;
+    --clr-switch-track:#ece2e2;
+    --clr-link:#333333;
+    --clr-icon:;
+
+
+	--ff: "Cairo", sans-serif;
+    --ts-caption: 600 1.8rem/1 var(--ff);
+    --ts-normal-text: 400 1.6rem/1.4 var(--ff);
+    --ts-normal-semibold: 600 1.6rem/1.4 var(--ff);
+
+    --transition: all 0.2s linear;
+    --shadow-card: 5px 5px 30px 0 rgba(51, 51, 51, 20%);
+}
+
+[data-theme="dark"] {
+	--clr-background:#6e6e6e;
+	--clr-font:#3b8f2c;
+    --clr-text:;
+    --clr-card:#000000;
+    --clr-switch-track:#949494;
+    --clr-link:#3b8f2c;
+    --clr-icon:;
+
+
+	--ff: "Arial", sans-serif;
+    --ts-caption: 600 1.8rem/1 var(--ff);
+    --ts-normal-text: 400 1.6rem/1.4 var(--ff);
+    --ts-normal-semibold: 600 1.6rem/1.4 var(--ff);
+
+    --transition: all 0.2s linear;
+    --shadow-card: 5px 5px 30px 0 rgba(221, 221, 221, 5%);
+}
+/**********************************/
+/* 1. Estilos gerais
+/**********************************/
+html{
+    font-size: 62.5;
+    font-family: var(--ff);
+    color: var(--clr-font);
+    transition: var(--transition);
+}
+
+body{
+    background-color: var(--clr-backgraud);
+    transition: var(--transition);
+}
+
+li{
+    font-size: var(--ts-normal-semibold);
+    display: contents;
+}
+
+a{
+    color: var(--clr-font);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+/**********************************/
+/* 2. Navbar
+/**********************************/
+
+.navbar{
+    background-color: var(--clr-card);
+    transition: var(--transition);
+    min-height: 2em;
+    padding: auto;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    position: relative;
+    margin: -0.4%;
+}
+
+.navbar_midia{
+    fill: var(--clr-font);
+    cursor: pointer;
+    transition: var(--transition);
+    left: 20px;
+}
+#github{
+    margin-left: 10rem;
+}
+#zap{
+    margin-right: 20rem;
+}
+.navbar_midia:hover{
+    filter: brightness(70%);
+    padding: 1rem;
+}
+
+.navbar_pag{
+    padding: 1rem;
+}
+
+.navbar_pag:hover{
+    filter: brightness(50%);
+    padding: 1.5rem;
+}
+
+.logo{
+    fill: var(--clr-font);
+    transition: var(--transition);
+    position: absolute;
+    padding: auto;
+    left: 300px;
+    cursor: pointer;
+}
+
+.logo:hover{
+    fill-opacity: 80%;
+}
+
+.switch{
+    font-size: 1.5rem;
+    display:flex;
+    position: absolute;
+    padding: 1rem;
+    align-items: center;
+    top: -10px;
+}
+.icones{
+    font-size: 0.5rem;
+}
+.switch__track{
+    background-color: var(--clr-switch-track);
+    display: flex;
+    height: 1rem;
+    width: 2rem;
+    cursor: pointer;
+    margin: 0 .2rem;
+    border-radius: 1rem;
+    align-items: center;
+}
+
+.switch__track::before{
+    content: "";
+    background-color: var(--clr-font);
+    transition: var(--transition);
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+    position: relative;
+    left: 0;
+}
+
+.switch__track--darck::before{
+    left: 1rem;
+}
+
+@media (max-width: 1650px) {
+    .navbar{
+        margin: -0.5%;
+    }
+    
+    #github{
+        margin-left: 5rem;
+    }
+    #zap{
+        margin-right: 15rem;
+    }
+    
+    .navbar_pag{
+        padding: 0.5rem;
+    }
+    
+    
+    .logo{
+        left: 200px;
+    }
+
+    .switch{
+        font-size: 1.5rem;
+        top: -5px;
+    }
+    
+    .switch__track{
+        height: 1.3rem;
+        width: 2.3rem;
+    }
+    
+    .switch__track::before{
+        height: 1.3rem;
+        width: 1.3rem;
+    }
+    
+    .switch__track--darck::before{
+        left: 1rem;
+    }
+}/* Laptops Grandes: */
+@media (max-width: 1281px) {
+    .navbar{
+        margin: -0.6%;
+    }
+    .navbar_midia{
+        height: 40px;
+    }
+    .navbar_midia:hover{
+        filter: brightness(70%);
+        padding: 0.8rem;
+    }
+    .menores{
+        height: 50px;
+    }
+    #github{
+        margin-left: 2rem;
+    }
+    #zap{
+        margin-right: 9rem;
+    }
+    
+    .navbar_pag{
+        padding: 0.5rem;
+    }
+
+    .navbar_pag:hover{
+        filter: brightness(50%);
+        padding: 1.3rem;
+    }
+    
+    .logo{
+        left: 150px;
+    }
+
+    .switch{
+        font-size: 1.3rem;
+        top: -5px;
+    }
+    
+    .switch__track{
+        height: 1rem;
+        width: 2rem;
+    }
+    
+    .switch__track::before{
+        height: 1rem;
+        width: 1rem;
+    }
+    
+    .switch__track--darck::before{
+        left: 1rem;
+    }
+}/* Laptops Médios */
+@media (max-width: 1025px) {
+    .navbar{
+        margin: -1%;
+    }
+    .navbar_midia{
+        height: 30px;
+    }
+    .navbar_midia:hover{
+        filter: brightness(70%);
+        padding: 0.6rem;
+    }
+    .menores{
+        height: 40px;
+    }
+    #github{
+        margin-left: 1rem;
+    }
+    .navbar_pag{
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .navbar_pag:hover{
+        filter: brightness(50%);
+        padding: 1rem;
+    }
+    
+    .logo{
+        left: 150px;
+        height: 40px;
+    }
+
+    .switch{
+        font-size: 1rem;
+        top: -5px;
+    }
+    
+    .switch__track{
+        height: 1rem;
+        width: 2rem;
+    }
+    
+    .switch__track::before{
+        height: 1rem;
+        width: 1rem;
+    }
+    
+    .switch__track--darck::before{
+        left: 1rem;
+    }
+}/* Laptops Pequenos e Tablets Grandes */
+@media (max-width: 801px) {
+    .navbar{
+        margin: -1%;
+    }
+    .navbar_midia{
+        height: 25px;
+    }
+    .navbar_midia:hover{
+        filter: brightness(70%);
+        padding: 0.6rem;
+    }
+    .menores{
+        height: 30px;
+    }
+    #github{
+        margin-left: 0.5rem;
+    }
+    #zap{
+        margin-right: 6rem;
+    }
+    .navbar_pag{
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    
+    .logo{
+        left: 100px;
+        height: 30px;
+    }
+
+    .switch{
+        font-size: 1rem;
+        top: -5px;
+    }
+    
+    .switch__track{
+        height: 1rem;
+        width: 2rem;
+    }
+    
+    .switch__track::before{
+        height: 1rem;
+        width: 1rem;
+    }
+    
+    .switch__track--darck::before{
+        left: 1rem;
+    }
+}/*Tablets Médios*/
+@media (max-width: 600px) {
+    .navbar{
+        margin: -1.5%;
+    }
+    .navbar_midia{
+        height: 25px;
+    }
+    .navbar_midia:hover{
+        filter: brightness(70%);
+        padding: 0.4rem;
+    }
+    .menores{
+        height: 30px;
+    }
+    #github{
+        margin-left: -0.2rem;
+    }
+    #zap{
+        margin-right: 7rem;
+    }
+    .navbar_pag{
+        padding: 0.5rem;
+        font-size: 0.6rem;
+    }
+    
+    .logo{
+        left: 50px;
+        height: 30px;
+    }
+
+}/*Tablets Pequenos e Smartphones Grandes*/
+@media (max-width: 481px) {
+    .navbar{
+        margin: -2.5%;
+        min-height: 0.5rem;
+    }
+    .navbar_midia{
+        height: 14px;
+    }
+    .navbar_midia:hover{
+        filter: brightness(70%);
+        padding: 0.2rem;
+    }
+    .menores{
+        height: 18px;
+    }
+    #github{
+        margin-left: -0.1px;
+    }
+    #zap{
+        margin-right: 4rem;
+    }
+    .navbar_pag{
+        padding: 0.2rem;
+        font-size: 0.5rem;
+    }
+    .navbar_pag:hover{
+        filter: brightness(50%);
+        padding: 0.5rem;
+    }
+    .logo{
+        left: 20px;
+        height: 20px;
+    }
+    .switch{
+        font-size: 0.5rem;
+        top: -5px;
+    }
+    
+    .switch__track{
+        height: 0.5rem;
+        width: 1rem;
+    }
+    
+    .switch__track::before{
+        height: 0.5rem;
+        width: 0.5rem;
+    }
+    
+    .switch__track--darck::before{
+        left: 0.5rem;
+    }
+
+}/*Smartphones Médios*/
+@media (max-width: 320px) {
+    .navbar{
+        margin: -2.5%;
+        min-height: 0.2rem;
+    }
+    .navbar_midia{
+        height: 11px;
+    }
+    .navbar_midia:hover{
+        filter: brightness(70%);
+        padding: 0.1rem;
+    }
+    .menores{
+        height: 13px;
+    }
+    #github{
+        margin-left: 0.01px;
+    }
+    #zap{
+        margin-right: 4rem;
+    }
+    .navbar_pag{
+        padding: 0.1rem;
+        font-size: 0.4rem;
+    }
+    .navbar_pag:hover{
+        filter: brightness(50%);
+        padding: 0.5rem;
+    }
+    .logo{
+        left: 10px;
+        height: 13px;
+    }
+    .switch{
+        font-size: 0.5rem;
+        top: -12px;
+        right: -10px;
+    }
+    
+    .switch__track{
+        height: 0.5rem;
+        width: 1rem;
+    }
+    
+    .switch__track::before{
+        height: 0.5rem;
+        width: 0.5rem;
+    }
+    
+    .switch__track--darck::before{
+        left: 0.5rem;
+    }
+
+}/*Smartphones Pequenos*/
+/**********************************/
+/* 3. Loading
+/**********************************/
+
+/**********************************/
+/* 4. Container
+/**********************************/
+
+/**********************************/
+/* 5. State Select
+/**********************************/
+
+/**********************************/
+/* 6. Descrição
+/**********************************/
+
+/**********************************/
+/* 7. Data Box
+/**********************************/
+
+
+/**********************************/
+/* 8. Footer
+/**********************************/
