@@ -42,7 +42,7 @@
 }
 
 [data-theme="dark"] {
-	--clr-background:#111111;
+	--clr-backgraud:#111111;
 	--clr-font:#F5F5F5;
     --clr-card:#1A1A1A;
     --clr-switch-track:#AABBCC;
