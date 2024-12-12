@@ -21,7 +21,8 @@
     --clr-switch-track:#ece2e2;
     --clr-link:#333333;
     --clr-icon:#ffffff;
-
+    --clr-circol:linear-gradient(#3A802E, transparent), linear-gradient(200deg, #2c5525, #000000);
+    --clr-ceta:linear-gradient(to top,rgb(0, 255, 0),rgb(0, 0, 0)); 
 
 	--ff: "Cairo", sans-serif;
     --ts-caption: 600 1.8rem/1 var(--ff);
@@ -40,7 +41,8 @@
     --clr-switch-track:#949494;
     --clr-link:#3b8f2c;
     --clr-icon:#111111;
-
+    --clr-circol:linear-gradient(#000000, transparent), linear-gradient(200deg, #2c5525, #3A802E);
+    --clr-ceta:linear-gradient(to top,rgb(0, 0, 0), rgb(0, 255, 0)); 
 
 	--ff: "Arial", sans-serif;
     --ts-caption: 600 1.8rem/1 var(--ff);
@@ -92,7 +94,7 @@ a{
     justify-content:right;
     align-items: center;
     position: relative;
-    margin: -0.4%;
+    width: 100%;
 }
 
 .navbar_midia{
@@ -532,40 +534,52 @@ a{
 /* 8. Footer
 /**********************************/
 .footer{
+    content: "";
+    display: block;
     position:absolute;
     top: 100%;
     width: 100%;
     z-index: 2;
-    box-shadow: var(--shadow-card);
 }
 
 .footer::before{
     content: "";
-    background-color:var(--clr-font);
+    background: var(--clr-circol);
     transition: var(--transition);
     display: block;
     height: 5rem;
     width: 5rem;
-    border-radius: 5rem;
+    border-radius: 50%;
     position:absolute;
     left: 50%;
-    top: -30%;
     z-index: 0;
+    transform: translate(-50%, -50%);
 }
 
-.footer::after{
-    content: "";
-    position: absolute;
-    width: 0; 
-    height: 0; 
-    border-left: 1rem solid transparent; 
-    border-right: 1rem solid transparent; 
-    border-bottom: 1.5rem solid var(--clr-backgraud);
-    left: 51.5%;
-    top: -31%;
+.footer_ceta .nav_clink{
+    position: relative;
+    display: flex;
+    padding-top: 0;
+    margin: 0;
+    margin-top: -120%;
+    font-size: 3rem;
+    transition: var(--transition);
+    background: var(--clr-ceta);
+    -webkit-background-clip: text; 
+    color: transparent;
     z-index: 1;
+    transition: var(--transition);
+    transform: translate(240%, -150%);
 }
 
+.footer_ceta:hover .nav_clink{ 
+    animation: subirDescer 1s infinite;;
+}
+
+@keyframes subirDescer { 
+0% { transform: translate(240%, -180%);; background: linear-gradient(to top,rgb(0, 0, 0), rgb(0, 255, 0));-webkit-background-clip: text;color: transparent;} 
+50% { transform: translate(240%, -150%);; background:  linear-gradient(to top,rgb(0, 255, 0), rgb(0, 0, 0)); -webkit-background-clip: text;color: transparent;} 
+100% { transform: translate(240%, -180%);; background:  linear-gradient(to top,rgb(0, 0, 0), rgb(0, 255, 0)); -webkit-background-clip: text;color: transparent;}}
 footer{
     font: var(--ts-normal-semibold);
     box-shadow: var(--shadow-card);
