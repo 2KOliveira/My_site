@@ -569,7 +569,7 @@ a{
     color: transparent;
     z-index: 1;
     transition: var(--transition);
-    transform: translate(240%, -150%);
+    transform: translate(585%, -150%);
 }
 
 .footer_ceta:hover .nav_clink{ 
@@ -577,9 +577,9 @@ a{
 }
 
 @keyframes subirDescer { 
-0% { transform: translate(240%, -180%);; background: linear-gradient(to top,rgb(0, 0, 0), rgb(0, 255, 0));-webkit-background-clip: text;color: transparent;} 
-50% { transform: translate(240%, -150%);; background:  linear-gradient(to top,rgb(0, 255, 0), rgb(0, 0, 0)); -webkit-background-clip: text;color: transparent;} 
-100% { transform: translate(240%, -180%);; background:  linear-gradient(to top,rgb(0, 0, 0), rgb(0, 255, 0)); -webkit-background-clip: text;color: transparent;}}
+0% { transform: translate(585%, -180%);; background: linear-gradient(to top,rgb(0, 0, 0), rgb(0, 255, 0));-webkit-background-clip: text;color: transparent;} 
+50% { transform: translate(585%, -150%);; background:  linear-gradient(to top,rgb(0, 255, 0), rgb(0, 0, 0)); -webkit-background-clip: text;color: transparent;} 
+100% { transform: translate(585%, -180%);; background:  linear-gradient(to top,rgb(0, 0, 0), rgb(0, 255, 0)); -webkit-background-clip: text;color: transparent;}}
 footer{
     font: var(--ts-normal-semibold);
     box-shadow: var(--shadow-card);
